@@ -1,0 +1,1 @@
+A simple jenkins pipeline to create a docker container as agent and verify if docker agent configuartion is working as expected
