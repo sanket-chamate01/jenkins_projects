@@ -1,0 +1,21 @@
+pipeline{
+    agent none
+    stages{
+        stage('Frontend'){
+            agent{
+                docker { image 'node:alpine '}
+            }
+            steps{
+                sh 'node --version'
+            }
+        }
+        stage('Backend'){
+            agent{
+                docker {image 'php:latest'}
+            }
+            steps{
+                sh 'php -v'
+            }
+        }
+    }
+}
